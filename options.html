@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Monitor Options</title>
+  <style>
+    body {
+      width: 400px;
+  font-family: 'Inter', Arial, sans-serif; /* Modern font stack */
+      padding: 10px;
+    }
+    h2 {
+  color: #000; /* Black as requested */
+  font-size: 24px; /* Larger for prominence */
+  font-weight: 700; /* Bold for impact */
+  margin: 0 0 15px 0; /* Adjusted spacing */
+  letter-spacing: 0.5px; /* Subtle spacing for elegance */
+  font-family: 'Inter', sans-serif; /* Consistent modern font */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .checkbox-label {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+    border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>API Monitor Options</h2>
+  <label for="domain">Domain to monitor (Example: api.test.com):</label>
+  <input type="text" id="domain" placeholder="Enter domain">
+  <label class="checkbox-label" style="display: none;" >
+    <input type="checkbox" id="clearOnNavigate" checked>
+    Clear API calls on page navigation/reload
+  </label>
+  <button id="saveButton">Save</button>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Monitor</title>
+  <style>
+    body {
+  width: 400px;
+  font-family: 'Inter', Arial, sans-serif; /* Modern font stack */
+  padding: 10px;
+  background-color: #fff; /* Clean white background */
+}
+
+h2 {
+  color: #000; /* Black as requested */
+  font-size: 24px; /* Larger for prominence */
+  font-weight: 700; /* Bold for impact */
+  margin: 0 0 15px 0; /* Adjusted spacing */
+  letter-spacing: 0.5px; /* Subtle spacing for elegance */
+  font-family: 'Inter', sans-serif; /* Consistent modern font */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+    #apiList {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      background-color: #f9f9f9; /* Added for subtle background */
+    }
+    .api-entry {
+      margin-bottom: 10px;
+      word-break: break-all;
+      padding: 8px;
+      background-color: white; /* Added for contrast */
+      border-radius: 5px; /* Added for curved entry boxes */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+    .api-entry strong {
+      color: #333; /* Darker text for method */
+      font-size: 14px;
+    }
+    .api-entry a {
+      color: #007bff; /* Blue for URL */
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .api-entry a:hover {
+      text-decoration: underline;
+    }
+    .api-entry small {
+      color: #666; /* Lighter text for timestamp/status */
+      font-size: 12px;
+    }
+    .api-entry hr {
+      border: none;
+      border-top: 1px solid #e0e0e0; /* Light divider */
+      margin: 8px 0;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 5px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #clearButton {
+      background-color: #dc3545;
+    }
+    #clearButton:hover {
+      background-color: #c82333;
+    }
+    #optionsLink {
+      background-color: #007bff;
+    }
+    #optionsLink:hover {
+      background-color: #0056b3;
+    }
+    #copyButton {
+      background-color: #28a745;
+    }
+    #copyButton:hover {
+      background-color: #218838;
+    }
+    #refreshButton {
+      background-color: #ffc107;
+    }
+    #refreshButton:hover {
+      background-color: #e0a800;
+    }
+    #debugButton {
+      background-color: #6c757d;
+    }
+    #debugButton:hover {
+      background-color: #5a6268;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>API Monitor</h2>
+  <input type="text" id="searchInput" placeholder="Search...">
+  <button id="clearButton">Clear</button>
+  <button id="copyButton">Copy</button>
+  <button id="refreshButton">Refresh</button>
+  <button id="optionsLink">Options</button>
+  <button style="display: none;" id="debugButton">Debug Storage</button>
+  <div id="apiList"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
