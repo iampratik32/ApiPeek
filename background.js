@@ -60,13 +60,13 @@ browser.webRequest.onCompleted.addListener(
 );
 
 // Clear API calls on page change or reload, based on user preference
-browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === "complete") {
-    browser.storage.local.get("clearOnNavigate", function(data) {
-      if (data.clearOnNavigate !== false) {
-        browser.storage.local.set({ apiCalls: [] }, function() {
-        });
-      }
-    });
-  }
-});
+// browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+//   if (changeInfo.status === "complete") {
+//     browser.storage.local.get("clearOnNavigate", function(data) {
+//       if (data.clearOnNavigate !== false) {
+//         browser.storage.local.set({ apiCalls: [] }, function() {
+//         });
+//       }
+//     });
+//   }
+// });

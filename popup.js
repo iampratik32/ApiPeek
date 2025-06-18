@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const filteredCalls = filter ? apiCalls.filter(call => call.url.toLowerCase().includes(filter)) : apiCalls;
       const endpoints = filteredCalls.map(call => call.url).reverse().join("\n"); // Reverse to match display order
       navigator.clipboard.writeText(endpoints).then(() => {
-        alert(`Copied ${filteredCalls.length} endpoint(s) to clipboard!`);
+        // alert(`Copied ${filteredCalls.length} endpoint(s) to clipboard!`);
       }).catch(err => {
         console.error("Failed to copy: ", err);
         alert("Failed to copy endpoints.");

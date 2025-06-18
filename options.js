@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const domain = domainInput.value.trim();
     const clearOnNavigate = clearOnNavigateCheckbox.checked;
     browser.storage.local.set({ domain: domain, clearOnNavigate: clearOnNavigate }, function() {
-      alert("Settings saved!");
+      alert("Settings Saved");
     });
   });
 });
